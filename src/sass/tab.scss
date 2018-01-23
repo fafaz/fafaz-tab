@@ -1,0 +1,53 @@
+@mixin clearfix {
+    &,
+    &:after {
+        clear: both;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        display: table;
+    }
+}
+
+.tab-container {
+    
+}
+
+.tab-header {
+    @include clearfix;
+    position:relative;
+    user-select: none;
+}
+
+.tab-header__item {
+    float: left;
+    text-align:left;
+    padding: 1em;
+    cursor: pointer;
+
+    &.is-active {
+        color:#4456f4;
+    }
+}
+.tab-header__activeLine {
+    position:absolute;
+    top:calc(100% - 2px);
+    left:0;
+    height:2px;
+    width:auto;
+    background-color:#4456f4;
+    transition: all 0.25s ease-out;
+}
+
+.tab-body {
+
+}
+
+.tab-body__item {
+    display:none;
+    &.is-active {
+        display:block;
+    }
+}
