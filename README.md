@@ -1,53 +1,58 @@
 # fafaz-Tab
 fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB gzipped)
 
-</br>
+</br><br/>
 
-## Instructions
-
-Install via add a css, javascript files from the [build](build) directory to your page.
-
-
-<br/>
-
-## Usage
-
-
-#### HTML
+## Instructions 
+#### common
 
 ```html
-<head>
-  ...
-  <script src="Tab.min.js"></script>
-</head>
-
 <body>
-  <div class="tab">
-    <div class="tab-header">
-      <div class="tab-header__item">title1</div>
-      <div class="tab-header__item">title2</div>
-      <div class="tab-header__item">title3</div>
+    <div class="tab">
+        <div class="tab-header">
+            <div class="tab-header__item">title 1</div>
+            <div class="tab-header__item">title 2</div>
+            <div class="tab-header__item">title 3</div>
+        </div>
+        <div class="tab-body">
+            <div class="tab-body__item">content 1</div>
+            <div class="tab-body__item">content 2</div>
+            <div class="tab-body__item">content 3</div>
+        </div>
     </div>
-    <div class="tab-body">
-      <div class="tab-body__item">content1</div>
-      <div class="tab-body__item">content2</div>
-      <div class="tab-body__item">content3</div>
-    </div>
-  </div>
 </body>
 ```
 
+<br/>
 
-</br>
+#### basic usage
+```html
+<body>
+  .
+  .
+  .
 
-#### Javascript
+    <script src="path/Tab.min.js"></script>
+    <script>
+        var myTab = new fafaz.Tab.default('.tab');
+    </script>
+</body>
+```
+
+<br/>
+
+#### package manager + babel compiler 
+`npm install --save fafaz-tab` **or** `yarn add fafaz-tab`
+
 
 ```javascript
-var myTab = new fafaz.Tab.default('.tab');
+import Tab from 'fafaz-tab';
+
+const myTab = new Modal('.tab');
 ```
 
 
-<br/>
+<br/><br/>
 
 ## Events
 
@@ -59,7 +64,13 @@ myTab.on('change', ({ idx, container }) => {
 ```
 
 
-<br/>
+<br/><br/>
+
+## Compatibility
+
+IE10+ (this library uses css flexbox)
+
+<br/><br/>
 
 ## License
 
