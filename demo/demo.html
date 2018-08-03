@@ -21,8 +21,13 @@
       font-size: 15px;
       margin: 0;
       padding: 0;
+      background-color:#f9f9f9;
     }
 
+    .header {
+      border:1px solid #f1f1f1;
+      padding:1em 0;
+    }
     .container {
       width: 100%;
     }
@@ -30,7 +35,7 @@
     .container-inner {
       width: 100%;
       max-width: 900px;
-      margin: 100px auto;
+      margin: 0 auto;
     }
   </style>
   <link rel="stylesheet" href="../build/Tab.min.css">
@@ -38,7 +43,12 @@
 </head>
 
 <body>
-  <section class="container">
+  <header class="header">
+    <div class="container-inner">
+      fafazTab
+    </div>
+  </header>
+  <div class="container">
     <div class="container-inner">
       <div class="tab-container">
         <div class="tab-header">
@@ -47,7 +57,6 @@
           <div class="tab-header__item">TAB111</div>
           <div class="tab-header__item">TAB1111</div>
           <div class="tab-header__item">TAB11111</div>
-          <div class="tab-header__activeLine"></div>
         </div>
         <div class="tab-body">
           <div class="tab-body__item is-active">content 1</div>
@@ -75,7 +84,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <script type="text/javascript">
     (function () {
