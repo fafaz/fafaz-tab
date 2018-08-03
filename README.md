@@ -8,7 +8,7 @@ fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB
 
 ```html
 <body>
-    <div class="tab">
+    <div class="tab" hidden>
         <div class="tab-header">
             <div class="tab-header__item">title 1</div>
             <div class="tab-header__item">title 2</div>
@@ -24,7 +24,6 @@ fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB
 ```
 
 <br/>
-
 #### basic usage
 ```html
 <body>
@@ -40,7 +39,6 @@ fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB
 ```
 
 <br/>
-
 #### package manager + babel compiler 
 `npm install --save fafaz-tab` **or** `yarn add fafaz-tab`
 
