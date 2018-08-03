@@ -4,12 +4,8 @@
  * https://github.com/fafaz/fafaz-tab
  */
 
-//  a one instance per only a container (for state management)
-// methods: [ move(idx), resize() ]
-// events: [ ready, select, change ]
-
 export default class Tab {
-    VERSION = '1.0.0';
+    VERSION = '1.0.1';
 
     state = {
         lastIdx: 0
