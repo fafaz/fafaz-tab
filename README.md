@@ -1,8 +1,5 @@
-# fafaz-Modal
-fafaz-Modal is a lightweight modal plugin with no dependencies (8.4KB minified / 2.98KB gzipped)
-
-Example Page: [https://fafaz.github.io/fafaz-modal/demo/demo.html](https://fafaz.github.io/fafaz-modal/demo/demo.html)
-
+# fafaz-Tab
+fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB gzipped)
 
 </br>
 
@@ -21,19 +18,22 @@ Install via add a css, javascript files from the [build](build) directory to you
 ```html
 <head>
   ...
-  <script src="Modal.min.js"></script>
-  <link rel="stylesheet" href="Modal.css" />
+  <script src="Tab.min.js"></script>
 </head>
 
 <body>
-  <button
-    class="modal-trigger"
-    data-modal-id="test-modal"
-    data-modal-title="this is test modal"
-    data-modal-width="400"
-    data-modal-height="300">click here</button>
-
-  <div id="test-modal" hidden>Your Contents</div>
+  <div class="tab">
+    <div class="tab-header">
+      <div class="tab-header__item">title1</div>
+      <div class="tab-header__item">title2</div>
+      <div class="tab-header__item">title3</div>
+    </div>
+    <div class="tab-body">
+      <div class="tab-body__item">content1</div>
+      <div class="tab-body__item">content2</div>
+      <div class="tab-body__item">content3</div>
+    </div>
+  </div>
 </body>
 ```
 
@@ -43,28 +43,7 @@ Install via add a css, javascript files from the [build](build) directory to you
 #### Javascript
 
 ```javascript
-var myModal = new fafaz.Modal('.modal-trigger', {
-  ...options
-});
-```
-
-
-<br/>
-
-## Options
-
-```javascript
-{
-    theme: {
-        useBorder: true,
-        borderColor: '#1e1e1e',
-        overlayColor: undefined,
-    },
-    cloneNode: true,
-    fixedHeight: false,
-    useHeader: true,
-    usePreloader: false
-}
+var myTab = new fafaz.Tab.default('.tab');
 ```
 
 
@@ -73,23 +52,11 @@ var myModal = new fafaz.Modal('.modal-trigger', {
 ## Events
 
 ```javascript
-var myModal = new fafaz.Modal('.modal-trigger', {
-    ...options
-});
-
-myModal.on('afterGenerate', function(e) {
-  // ~~~
-  // you can select container element by using e.container
+var myTab = new fafaz.Tab('.tab');
+myTab.on('change', ({ idx, container }) => {
+    console.log(idx, container);
 })
 ```
-
-
-<br/>
-
-## Dependencies
-
-egjs/component [https://github.com/naver/egjs-component](https://github.com/naver/egjs-component)
-
 
 
 <br/>
