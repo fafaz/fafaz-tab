@@ -1,6 +1,6 @@
 {
   "name": "fafaz-tab",
-  "version": "1.0.2,
+  "version": "1.0.2",
   "description": "",
   "main": "build/Tab.min.js",
   "scripts": {
