@@ -49,7 +49,7 @@ fafaz-Tab is a lightweight tab plugin with no dependencies (3KB minified / 1.3KB
 ```javascript
 import Tab from 'fafaz-tab';
 
-const myTab = new Modal('.tab');
+const myTab = new Tab('.tab');
 ```
 
 
